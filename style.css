@@ -27,104 +27,32 @@ time, mark, audio, video {
     background:transparent;
 }
 
-body {
-    line-height:1;
-}
-
-article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section {
-    display:block;
-}
-
-nav ul {
-    list-style:none;
-}
-
-blockquote, q {
-    quotes:none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content:'';
-    content:none;
-}
-
-a {
-    margin:0;
-    padding:0;
-    font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
-}
-
-/* change colours to suit your needs */
-ins {
-    background-color:#ff9;
-    color:#000;
-    text-decoration:none;
-}
-
-/* change colours to suit your needs */
-mark {
-    background-color:#ff9;
-    color:#000;
-    font-style:italic;
-    font-weight:bold;
-}
-
-del {
-    text-decoration: line-through;
-}
-
-abbr[title], dfn[title] {
-    border-bottom:1px dotted;
-    cursor:help;
-}
-
-table {
-    border-collapse:collapse;
-    border-spacing:0;
-}
-
-/* change border colour to suit your needs */
-hr {
-    display:block;
-    height:1px;
-    border:0;
-    border-top:1px solid #cccccc;
-    margin:1em 0;
-    padding:0;
-}
-
-input, select {
-    vertical-align:middle;
-}
 
 /* ok so this is finally my code*/
 .body {
   width: 100%;
-  height: auto;
 
 }
-#wrapper {
+.wrapper {
   width: 100%;
+  height: auto;
+
 
 }
 .border {
   background-color: #4d2000;
   width: 100%;
   height: 10px;
-  position: absolute;
+  /*position: absolute;
   z-index: 1;
-  margin: 0 auto;
+  margin: 0 auto;*/
 }
 
 h1 a {
   font-family: "Notable", sans-serif;
   color: #4d2000;
   font-weight: normal;
-  font-size: 40px;
+  font-size: 30px;
   margin: 0 auto;
   background-color: white;
   text-align: center;
@@ -141,15 +69,17 @@ h1 a {
 }
 
 nav {
-  width: 530px;
+  /*width: 100%;*/
   height: 30px;
   background-color: #e0a282;
+  display: block;
   margin: 0 auto;
   text-align: center;
 
 }
 
 ul {
+  width: 375px;
   margin: 0 auto;
   text-align: center;
 
@@ -177,27 +107,26 @@ ul li a:hover {
 }
 
 .content {
-  margin: 30px 40px;
-  width: 90%;
+  /*margin: 30px 40px;*/
+  width: 375px;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  grid-gap: 15px;
-  margin-left: 40px;
-  margin-right: 40px;
-  width: 100%%;
-  margin-bottom: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 2px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
 
 }
 
 .grid img {
   display: block;
   object-fit: cover;
-  width: 315px;
-  height: 450px;
+  width: 100%;
+  height: 250px;
   margin: 0 auto;
 
 }
@@ -206,109 +135,379 @@ ul li a:hover {
   opacity: 0.8;
 }
 
-/*.description {
-  font-family: "Lane-Upper", serif;
-  color: black;
-  text-transform: uppercase;
-  text-align: left;
-  padding-left: 20px;
-  letter-spacing: 1px;
-
-}*/
 
 /* contact page start */
 .contact {
   font-family: "DIN Condensed", sans-serif;
-  font-size: 30px;
+  font-size: 22px;
   color: #4d2000;
   font-weight: bold;
-  width: 500px;
+  width: 145px;
   justify-content: end;
   text-align: center;
-  margin-left: 85px;
-  padding-top: 15px;
+  margin-left: 24px;
+  padding-top: 5px;
   text-transform: uppercase;
 
 }
 .contact-p {
   font-family: "Caviar Dreams", serif;
-  font-size: 25px;
+  font-size: 12px;
   line-spacing: 2px;
-  font-weight: 350;
+  font-weight: 200;
   line-height: 1.4;
   color: #5f4007;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: left;
-  margin-left: 85px;
-  padding-left: 150px;
-  padding-top: 15px;
+  margin-left: 24px;
+  padding-left: 25px;
+  padding-top: 5px;
 }
 
 /* about page start*/
+
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 25px 25px 1fr;
-  grid-auto-rows: minmax(min-content, max-content);
+  width: 375px;
+  /*grid-template-columns: 1fr 1fr 1fr;*/
+  grid-template-rows: 1fr;
+  /*grid-auto-rows: minmax(min-content, max-content);*/
   grid-template-areas:
-  ". about . ."
-  ". about-me about-desc ." ;
+  "about"
+  "about-me about-desc" ;
 }
 
-.about-grid div:nth-child(1) {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-  width: auto;
-  height: auto;
-}
-.about-grid div:nth-child(2) {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
-  width: 500px;
-}
-.about-grid div:nth-child(3) {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-  width: 500px;
-}
 .about {
-  width: auto;
+  width: 145px;
 }
 .about p {
-  width: 500px;
-  justify-content: end;
+  width: 145px;
   text-align: center;
-  margin-left: 85px;
-  padding-top: 15px;
+  margin-left: 18px;
+  padding-top: 5px;
   font-family: "DIN Condensed", sans-serif;
-  font-size: 30px;
+  font-size: 22px;
   color: #4d2000;
   font-weight: bold;
   text-transform: uppercase;
 }
 .about-me {
+  width: 145px;
   display: block;
-  margin-left: 150px;
-  padding-top: 20px;
+  padding-top: 5px;
+  padding-left: 30px;
   margin-right: 0;
+  height: auto;
 }
+
+.about-me img{
+  width: 180px;
+  float: left;
+  padding-left: 20px;
+}
+
 .about-desc {
   margin: 0 auto;
   text-align: left;
-  width: 500px;
-  padding-left: 20px;
-  margin-right: 400px;
-  padding-top: 30px;
+  width: 50%;
+  padding-left: 50px;
+  margin-right: 40px;
+  padding-top: 24px;
 
 }
 .about-desc article {
   font-family: "Caviar Dreams", serif;
+  text-align: justify;
   line-spacing: 2px;
-  font-weight: 350;
-  line-height: 1.4;
+  font-weight: 280;
+  line-height: 1.2;
   color: #5f4007;
   text-transform: none;
   letter-spacing: 1px;
-  font-size: 14px;
+  font-size: 10px;
 
+}
+@media only screen and (min-width:768px) {
+
+  h1 a {
+    padding-top: 30px;
+  }
+  .content {
+    /*margin: 30px 40px;*/
+    width: 768px;
+  }
+  .grid {
+    width: 750px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 7px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+
+  }
+  .grid img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 350px;
+    margin: 0 auto;
+  }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 25px 25px 1fr;
+    grid-auto-rows: minmax(min-content, max-content);
+    grid-template-areas:
+    ". about . ."
+    ". about-me about-desc ." ;
+  }
+
+  .about-grid div:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    width: auto;
+    height: auto;
+  }
+  .about-grid div:nth-child(2) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    width: 300px;
+  }
+  .about-grid div:nth-child(3) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    width: 300px;
+  }
+
+  .about {
+    width: 100%;
+
+  }
+  .about p {
+    width: 145px;
+    text-align: center;
+    margin-left: 18px;
+    padding-top: 5px;
+    font-family: "DIN Condensed", sans-serif;
+    font-size: 30px;
+    color: #4d2000;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .about-me {
+    width: 145px;
+    display: block;
+    padding-top: 5px;
+    padding-left: 30px;
+    margin-right: 0;
+    height: auto;
+  }
+
+  .about-me img{
+    width: 300px;
+    float: left;
+    padding-left: 25px;
+  }
+
+  .about-desc {
+    margin: 0 auto;
+    text-align: left;
+    width: 50%;
+    padding-left: 60px;
+    margin-right: 40px;
+    padding-top: 24px;
+
+  }
+  .about-desc article {
+    font-family: "Caviar Dreams", serif;
+    text-align: justify;
+    line-spacing: 2px;
+    font-weight: 280;
+    line-height: 1.2;
+    color: #5f4007;
+    text-transform: none;
+    letter-spacing: 1px;
+    font-size: 14px;
+
+
+  }
+  .contact {
+    font-family: "DIN Condensed", sans-serif;
+    font-size: 30px;
+    color: #4d2000;
+    font-weight: bold;
+    width: 145px;
+    justify-content: end;
+    text-align: center;
+    margin-left: 24px;
+    padding-top: 5px;
+    text-transform: uppercase;
+
+  }
+  .contact-p {
+    font-family: "Caviar Dreams", serif;
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 1.3;
+    color: #5f4007;
+    /*text-transform: uppercase;*/
+    letter-spacing: 1px;
+    margin-left: 24px;
+    padding-left: 25px;
+    padding-top: 5px;
+  }
+
+}
+
+@media only screen and (min-width:414px) {
+  .content {
+    width: 414px;
+  }
+
+  .grid img {
+    height: 300px;
+  }
+
+  .about-desc article{
+    font-size: 11px;
+    text-align: left;
+  }
+
+@media only screen and (min-width:1000px) {
+
+  .content {
+    margin: 30px 30px;
+  }
+  h1 a {
+    padding-top: 40px;
+    font-size: 40px;
+  }
+  nav {
+    width: 530px;
+    height: 30px;
+    background-color: #e0a282;
+    margin: 0 auto;
+    text-align: center;
+
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 15px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+
+  }
+
+  .grid img {
+    display: block;
+    object-fit: cover;
+    width: 315px;
+    height: 450px;
+    margin: 0 auto;
+
+  }
+  .contact {
+    font-family: "DIN Condensed", sans-serif;
+    font-size: 30px;
+    color: #4d2000;
+    font-weight: bold;
+    width: 500px;
+    justify-content: end;
+    text-align: center;
+    margin-left: 85px;
+    padding-top: 15px;
+    text-transform: uppercase;
+
+  }
+  .contact-p {
+    font-family: "Caviar Dreams", serif;
+    font-size: 25px;
+    line-spacing: 2px;
+    font-weight: 350;
+    line-height: 1.4;
+    color: #5f4007;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: left;
+    margin-left: 85px;
+    padding-left: 150px;
+    padding-top: 15px;
+  }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 25px 25px 1fr;
+    grid-auto-rows: minmax(min-content, max-content);
+    grid-template-areas:
+    ". about . ."
+    ". about-me about-desc ." ;
+  }
+
+  .about-grid div:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    width: auto;
+    height: auto;
+  }
+  .about-grid div:nth-child(2) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    width: 500px;
+  }
+  .about-grid div:nth-child(3) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    width: 500px;
+  }
+  .about {
+    width: auto;
+  }
+  .about p {
+    width: 500px;
+    justify-content: end;
+    text-align: center;
+    margin-left: 85px;
+    padding-top: 15px;
+    font-family: "DIN Condensed", sans-serif;
+    font-size: 30px;
+    color: #4d2000;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .about-me {
+    display: block;
+    margin-left: 150px;
+    padding-top: 20px;
+    margin-right: 0;
+  }
+  .about-me img{
+    float: right;
+    width: 400px;
+  }
+
+  .about-desc {
+    margin: 0 auto;
+    text-align: left;
+    width: 500px;
+    padding-left: 20px;
+    margin-right: 400px;
+    padding-top: 30px;
+
+  }
+  .about-desc article {
+    font-family: "Caviar Dreams", serif;
+    line-spacing: 2.5px;
+    font-weight: 350;
+    line-height: 1.4;
+    color: #5f4007;
+    text-transform: none;
+    letter-spacing: 1px;
+    font-size: 15px;
+    text-align: left;
+
+  }
 }
